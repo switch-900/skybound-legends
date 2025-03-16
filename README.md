@@ -1,6 +1,6 @@
 # Skybound Legends
 
-![Skybound Legends Banner](/public/images/skybound-banner.png)
+![Skybound Legends Banner](/images/skybound-banner.webp)
 
 ## Game Description
 
