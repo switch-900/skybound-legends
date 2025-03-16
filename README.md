@@ -1,70 +1,177 @@
-# Getting Started with Create React App
+# Skybound Legends
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Skybound Legends Banner](/public/images/skybound-banner.png)
 
-## Available Scripts
+## Game Description
 
-In the project directory, you can run:
+**Skybound Legends** is an exhilarating open-world flying adventure that takes place in a vast sky realm of floating islands and ancient mysteries. Pilot your customizable aircraft through diverse biomes—from lush floating archipelagos to treacherous volcanic zones, crystalline formations, and forgotten ruins suspended in the clouds.
 
-### `npm start`
+As an aspiring sky pilot, you'll navigate the complex politics of rival factions while uncovering the secrets of a lost sky civilization. Master the art of flight with realistic aerodynamics that balance arcade accessibility with simulation depth, allowing for thrilling dogfights, daring exploration, and precise maneuvers through challenging environments.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The game features a dynamic weather system where raging storms, dense fog, and peaceful clear skies not only transform the visual experience but directly affect your aircraft's handling and mission strategies. Day and night cycles create ever-changing lighting conditions that reveal new perspectives on the breathtaking world around you.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Progress through an engaging storyline while building your reputation across multiple factions. Customize your aircraft with performance upgrades, weapon systems, and visual modifications earned through missions, exploration, and combat. Join flying squadrons with other pilots for cooperative challenges or test your skills in competitive aerial tournaments.
 
-### `npm test`
+With multiple progression paths focused on exploration, combat, or trade, Skybound Legends offers freedom to carve your own path through the skies while unraveling the mysteries of a forgotten world among the clouds.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Key Features
 
-### `npm run build`
+- **Physics-Based Flight Model** - Experience realistic but accessible flight mechanics with lift, drag, and stall dynamics
+- **Dynamic Open World** - Explore diverse biomes with unique visuals, resources, and challenges
+- **Deep Customization** - Upgrade and personalize your aircraft with performance parts, weapons, and visual elements
+- **Faction-Based Storyline** - Navigate complex relationships between rival sky factions
+- **Progressive Mission System** - Take on increasingly challenging quests that unlock new areas and abilities
+- **Dynamic Weather** - Adapt to changing weather conditions that affect flight physics and visibility
+- **Day/Night Cycle** - Experience the world in different lighting with unique challenges at night
+- **Combat System** - Engage in dogfights using various weapons and tactical maneuvers
+- **Formation Flying** - Join AI wingmates or other players in coordinated flight patterns
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+skybound-legends/
+├── package.json                # Project dependencies and configuration
+├── vite.config.js              # Vite configuration file
+├── public/                     # Static assets
+│   ├── models/                 # 3D models
+│   │   ├── aircraft/          # Aircraft models
+│   │   │   ├── standard.glb
+│   │   │   ├── fighter.glb
+│   │   │   ├── bomber.glb
+│   │   │   └── scout.glb
+│   │   ├── islands/           # Island models
+│   │   │   ├── standard.glb
+│   │   │   ├── volcanic.glb
+│   │   │   ├── crystal.glb
+│   │   │   └── ancient.glb
+│   │   └── projectiles/       # Projectile models
+│   │       ├── bullet.glb
+│   │       └── missile.glb
+│   ├── textures/              # Texture files
+│   │   ├── aircraft/          # Aircraft textures
+│   │   ├── islands/           # Island textures
+│   │   └── effects/           # Visual effect textures
+│   │       ├── explosion.png
+│   │       ├── smoke.png
+│   │       └── icons/         # UI and status icons
+│   ├── audio/                 # Audio files
+│   │   ├── effects/           # Sound effects
+│   │   ├── music/             # Background music
+│   │   └── ambient/           # Ambient sounds
+│   └── images/                # UI images and icons
+│       └── skybound-banner.png
+├── src/                       # Source code
+│   ├── index.jsx              # Entry point
+│   ├── App.jsx                # Main application component
+│   ├── components/            # React components
+│   │   ├── Game.jsx           # Main game component
+│   │   ├── aircraft/          # Aircraft components
+│   │   │   ├── PlayerAircraft.jsx      # Player aircraft with physics
+│   │   │   ├── AircraftModel.jsx       # Visual aircraft model
+│   │   │   ├── CameraFollow.jsx        # Camera that follows aircraft
+│   │   │   ├── Cockpit.jsx             # First-person cockpit view
+│   │   │   ├── EngineTrails.jsx        # Visual engine trails
+│   │   │   ├── WeaponSystem.jsx        # Aircraft weapons
+│   │   │   └── models/                 # Aircraft model components
+│   │   │       ├── StandardAircraft.jsx
+│   │   │       ├── FighterAircraft.jsx
+│   │   │       ├── BomberAircraft.jsx
+│   │   │       └── ScoutAircraft.jsx
+│   │   ├── audio/             # Audio system components
+│   │   │   ├── AudioSystem.jsx         # Main audio management
+│   │   │   └── SoundEffect.jsx         # Individual sound effects
+│   │   ├── physics/           # Physics system components
+│   │   │   ├── PhysicsWorld.jsx        # Main physics world
+│   │   │   ├── CollisionSystem.jsx     # Collision detection system
+│   │   │   └── WorldBoundary.jsx       # World boundary physics
+│   │   ├── ui/                # User interface components
+│   │   │   ├── GameUI.jsx              # Main game UI overlay
+│   │   │   ├── HUD.jsx                 # Heads-up display
+│   │   │   ├── TutorialUI.jsx          # Tutorial system
+│   │   │   ├── NotificationsUI.jsx     # Notification system
+│   │   │   ├── MissionCompleteUI.jsx   # Mission complete screen
+│   │   │   ├── LoadingScreen.jsx       # Loading screen
+│   │   │   ├── HangarUI.jsx            # Aircraft customization UI
+│   │   │   ├── MissionsUI.jsx          # Mission selection UI
+│   │   │   ├── MapUI.jsx               # World map UI
+│   │   │   ├── InventoryUI.jsx         # Inventory management
+│   │   │   ├── ShopUI.jsx              # Shop interface
+│   │   │   ├── PauseMenu.jsx           # Pause menu
+│   │   │   └── SettingsMenu.jsx        # Settings menu
+│   │   └── world/             # World environment components
+│   │       ├── IslandSystem.jsx        # Island generation and management
+│   │       ├── CloudSystem.jsx         # Cloud generation
+│   │       ├── WeatherSystem.jsx       # Weather effects
+│   │       ├── CheckpointSystem.jsx    # Mission checkpoints
+│   │       ├── ProjectileSystem.jsx    # Projectile management
+│   │       ├── ExplosionSystem.jsx     # Explosion effects
+│   │       ├── PickupSystem.jsx        # Collectible items
+│   │       ├── EnemyManager.jsx        # Enemy AI and spawning
+│   │       ├── StatusIcon.jsx          # Enemy status indicators
+│   │       └── islands/                # Island type components
+│   │           ├── StandardIsland.jsx
+│   │           ├── VolcanicIsland.jsx
+│   │           ├── CrystalIsland.jsx
+│   │           └── AncientIsland.jsx
+│   ├── contexts/              # React contexts
+│   │   └── GameContext.jsx    # Game state management
+│   ├── data/                  # Game data
+│   │   ├── aircraft.js        # Aircraft types and upgrades
+│   │   ├── checkpoints.js     # Checkpoint data
+│   │   ├── enemies.js         # Enemy types and behavior
+│   │   ├── items.js           # Items and pickups
+│   │   ├── missions.js        # Mission definitions
+│   │   └── world.js           # World data including islands
+│   └── utils/                 # Utility functions
+│       ├── physics.js         # Physics utility functions
+│       ├── storage.js         # Save/load game state
+│       └── helpers.js         # General helper functions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Skybound Legends
 
-### `npm run eject`
+A 3D flight game built with React Three Fiber.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Model Exporter
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project includes a model exporter tool to generate GLB files for all game models. You can:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Toggle between different model categories (aircraft, islands, projectiles)
+2. Preview each model in 3D space
+3. Export any model as a GLB file with one click
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Export Instructions
 
-## Learn More
+1. Run the application with `npm start` or `npm run dev`
+2. The Model Exporter view is shown by default
+3. Select a model category and browse through available models
+4. Click "Export as GLB" to save the current model as a GLB file
+5. Find exported models in your downloads folder
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Model Directory Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+public/
+├── models/
+│   ├── aircraft/
+│   │   ├── standard.glb
+│   │   ├── fighter.glb
+│   │   ├── bomber.glb
+│   │   └── scout.glb
+│   ├── islands/
+│   │   ├── standard.glb
+│   │   ├── volcanic.glb
+│   │   ├── crystal.glb
+│   │   └── ancient.glb
+│   └── projectiles/
+│       ├── bullet.glb
+│       └── missile.glb
+```
 
-### Code Splitting
+## Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project was bootstrapped with Create React App.
 
-### Analyzing the Bundle Size
+### Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `npm start` or `npm run dev` - Start development server
+- `npm run build` - Build the app for production
+- `npm test` - Run tests
+- `npm run eject` - Eject from Create React App
