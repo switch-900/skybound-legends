@@ -1,6 +1,6 @@
 # Skybound Legends
 
-![Skybound Legends Banner](/images/skybound-banner.jpg)
+![Skybound Legends Banner](/public/images/skybound-legends.jpg)
 
 ## Game Description
 
@@ -26,104 +26,6 @@ With multiple progression paths focused on exploration, combat, or trade, Skybou
 - **Combat System** - Engage in dogfights using various weapons and tactical maneuvers
 - **Formation Flying** - Join AI wingmates or other players in coordinated flight patterns
 
-
-skybound-legends/
-├── package.json                # Project dependencies and configuration
-├── vite.config.js              # Vite configuration file
-├── public/                     # Static assets
-│   ├── models/                 # 3D models
-│   │   ├── aircraft/          # Aircraft models
-│   │   │   ├── standard.glb
-│   │   │   ├── fighter.glb
-│   │   │   ├── bomber.glb
-│   │   │   └── scout.glb
-│   │   ├── islands/           # Island models
-│   │   │   ├── standard.glb
-│   │   │   ├── volcanic.glb
-│   │   │   ├── crystal.glb
-│   │   │   └── ancient.glb
-│   │   └── projectiles/       # Projectile models
-│   │       ├── bullet.glb
-│   │       └── missile.glb
-│   ├── textures/              # Texture files
-│   │   ├── aircraft/          # Aircraft textures
-│   │   ├── islands/           # Island textures
-│   │   └── effects/           # Visual effect textures
-│   │       ├── explosion.png
-│   │       ├── smoke.png
-│   │       └── icons/         # UI and status icons
-│   ├── audio/                 # Audio files
-│   │   ├── effects/           # Sound effects
-│   │   ├── music/             # Background music
-│   │   └── ambient/           # Ambient sounds
-│   └── images/                # UI images and icons
-│       └── skybound-banner.png
-├── src/                       # Source code
-│   ├── index.jsx              # Entry point
-│   ├── App.jsx                # Main application component
-│   ├── components/            # React components
-│   │   ├── Game.jsx           # Main game component
-│   │   ├── aircraft/          # Aircraft components
-│   │   │   ├── PlayerAircraft.jsx      # Player aircraft with physics
-│   │   │   ├── AircraftModel.jsx       # Visual aircraft model
-│   │   │   ├── CameraFollow.jsx        # Camera that follows aircraft
-│   │   │   ├── Cockpit.jsx             # First-person cockpit view
-│   │   │   ├── EngineTrails.jsx        # Visual engine trails
-│   │   │   ├── WeaponSystem.jsx        # Aircraft weapons
-│   │   │   └── models/                 # Aircraft model components
-│   │   │       ├── StandardAircraft.jsx
-│   │   │       ├── FighterAircraft.jsx
-│   │   │       ├── BomberAircraft.jsx
-│   │   │       └── ScoutAircraft.jsx
-│   │   ├── audio/             # Audio system components
-│   │   │   ├── AudioSystem.jsx         # Main audio management
-│   │   │   └── SoundEffect.jsx         # Individual sound effects
-│   │   ├── physics/           # Physics system components
-│   │   │   ├── PhysicsWorld.jsx        # Main physics world
-│   │   │   ├── CollisionSystem.jsx     # Collision detection system
-│   │   │   └── WorldBoundary.jsx       # World boundary physics
-│   │   ├── ui/                # User interface components
-│   │   │   ├── GameUI.jsx              # Main game UI overlay
-│   │   │   ├── HUD.jsx                 # Heads-up display
-│   │   │   ├── TutorialUI.jsx          # Tutorial system
-│   │   │   ├── NotificationsUI.jsx     # Notification system
-│   │   │   ├── MissionCompleteUI.jsx   # Mission complete screen
-│   │   │   ├── LoadingScreen.jsx       # Loading screen
-│   │   │   ├── HangarUI.jsx            # Aircraft customization UI
-│   │   │   ├── MissionsUI.jsx          # Mission selection UI
-│   │   │   ├── MapUI.jsx               # World map UI
-│   │   │   ├── InventoryUI.jsx         # Inventory management
-│   │   │   ├── ShopUI.jsx              # Shop interface
-│   │   │   ├── PauseMenu.jsx           # Pause menu
-│   │   │   └── SettingsMenu.jsx        # Settings menu
-│   │   └── world/             # World environment components
-│   │       ├── IslandSystem.jsx        # Island generation and management
-│   │       ├── CloudSystem.jsx         # Cloud generation
-│   │       ├── WeatherSystem.jsx       # Weather effects
-│   │       ├── CheckpointSystem.jsx    # Mission checkpoints
-│   │       ├── ProjectileSystem.jsx    # Projectile management
-│   │       ├── ExplosionSystem.jsx     # Explosion effects
-│   │       ├── PickupSystem.jsx        # Collectible items
-│   │       ├── EnemyManager.jsx        # Enemy AI and spawning
-│   │       ├── StatusIcon.jsx          # Enemy status indicators
-│   │       └── islands/                # Island type components
-│   │           ├── StandardIsland.jsx
-│   │           ├── VolcanicIsland.jsx
-│   │           ├── CrystalIsland.jsx
-│   │           └── AncientIsland.jsx
-│   ├── contexts/              # React contexts
-│   │   └── GameContext.jsx    # Game state management
-│   ├── data/                  # Game data
-│   │   ├── aircraft.js        # Aircraft types and upgrades
-│   │   ├── checkpoints.js     # Checkpoint data
-│   │   ├── enemies.js         # Enemy types and behavior
-│   │   ├── items.js           # Items and pickups
-│   │   ├── missions.js        # Mission definitions
-│   │   └── world.js           # World data including islands
-│   └── utils/                 # Utility functions
-│       ├── physics.js         # Physics utility functions
-│       ├── storage.js         # Save/load game state
-│       └── helpers.js         # General helper functions
 
 # Skybound Legends
 
